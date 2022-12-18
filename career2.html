@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+
+<style>
+   *{
+    box-sizing: border-box;
+    font-family: Arial Black;
+   }
+   body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+   }
+   /*for tr and td styling*/
+
+  /*for tr and td styling*/
+
+   .navbar{
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+   }
+
+   .title {
+    font-size: 1.5rem;
+    margin: .5rem;
+
+   }
+
+   .links ul {
+     margin: 0;
+     padding: 0;
+     display: flex;
+   }
+
+   .links li{
+    border-radius: 10px;
+    list-style: none;
+    transition: .5s;
+
+   }
+   .links li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+
+   }
+   .active, .links li:hover{
+    background-color: gray;
+    
+   }
+   .sideactive, .sidemenu li:hover{
+    background-color: gray;
+   }
+
+   ul .profile{
+    display: none;
+   }
+
+   ul .career{
+    display: none;
+   }
+
+   ul .travel{
+    display: none;
+   }
+   
+
+
+
+
+
+    #button1 {
+    position: absolute;
+    top: 9px;
+    right: .90rem;
+    display: none;
+    
+   }
+   #button2 {
+    height: ;
+    position: absolute;
+    top: 9px;
+    right: .90rem;
+    display: none;
+   }
+
+   .container{
+    margin: 0;
+    padding: 0;
+   }
+
+   .main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+   }
+
+   .sidemenu{
+    width: 20%;
+    height: 100vh;
+    background-color:black;
+
+
+   }
+  .sidemenu li{
+    list-style: none;
+  }
+  .sidemenu ul{
+    padding: 0;
+    margin: 0;
+  }
+  .sidemenu li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+    transition: .5s;
+  }
+  .sidemenu li a:hover{
+    background-color:gray;
+    color: white;
+  }
+
+  .content{
+    padding-top: 100px;
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+
+  }
+   
+  #image {
+    height: 500px;
+    max-width: 100%;
+    display: block;
+  }
+
+  .cardholder {
+    width: 910px;
+    height: 500px;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .cardholder img {
+    max-width: 100%;
+  }
+
+/*Ayaw na ni hilabti\pwede ra di ninyo ni apilon*/
+@media (max-width: 600px) {
+   .navbar{
+    flex-direction: column;
+    align-items: flex-start;
+   }
+   .links{
+    width: 100%;
+   }
+   .links li{
+    background-color: black;
+    
+   }
+     .content{
+    display: block;
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+
+ 
+   ul .profile{
+    display: none;
+   }
+   ul #profile:hover .profile{
+    display: block;
+    background-color: black;
+   }
+
+
+
+   ul .career {
+    display: none;
+   }
+   ul #career:hover .career{
+    display: block;
+    background-color: black;
+   }
+
+   ul .travel {
+    display: none;
+   }
+   ul #travel:hover .travel{
+    display: block;
+    background-color: black;
+   }
+
+
+   .links li{
+    border-radius: 1px;
+    text-align: center;
+   }
+
+   .links ul{
+    width: 100%;
+    flex-direction: column;
+    display: none;
+   }
+
+   .sidemenu{
+    display: none;
+   }
+
+
+   .links ul.active {
+    display: flex;
+   }
+
+   .link ul.hide {
+    display: none;
+   }
+
+
+   #button1{
+    display: flex;
+   }
+   #button1.hide{
+    display: none;
+   }
+   #button2{
+    display: none;
+   }
+   #button2.active{
+    display: flex;
+   }
+}
+/*Ayaw na ni hilabti\pwede ra di ninyo ni apilon*/
+
+
+
+
+</style>
+<body>
+
+<!---->
+  <div class="navbar">
+    <div class="title">Career</div>
+    <button id="button1" ><img src="menu.png"></button>
+    <button id="button2" ><img src="close.png"></button>
+    <div class="links">
+      <ul>
+        <li id="profile"><a href="profile.html">Profile</a>
+          <!--pwede di na apilon-->
+          <ul class="profile">
+           <li><a href="#">Personal Data</a></li>
+           <li><a href="#">Educational Background</a></li>
+           <li><a href="#">Family Background</a></li>
+           </ul>
+           <!--pwede di na apilon-->
+        </li>
+        <li id="career" class="active"><a href="career.html">Career</a>
+          <!--pwede di na apilon-->
+          <ul class="career">
+           <li><a href="#">Pilot</a></li>
+           <li><a href="#">Teacher</a></li>
+           <li><a href="#">SeaMan</a></li>
+           </ul>
+           <!--pwede di na apilon-->
+        </li>
+        <li id="travel"><a href="travel.html">Travel</a>
+          <!--pwede di na apilon-->
+          <ul class="travel">
+           <li><a href="#">Bogac, Surigao del Sur</a></li>
+           <li><a href="#">Kyoto, Japan</a></li>
+           <li><a href="#">Venice, Italy</a></li>
+           <!--pwede di na apilon-->
+           </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="main">
+     <div class="sidemenu">
+       <ul>
+         <li><a href="career1.html">Career1</a></li>
+         <li class="sideactive"><a href="career2.html">Career2</a></li>
+         <li><a href="career3.html">Career3</a></li>
+       </ul>
+     </div>
+     <div class="content">
+      <!---ilisi na nlng dayun og picture og text-->
+       <div class="Computer engineers">
+          <img src="12.jpg">
+       </div>
+       <div class="careerdes">
+         <h2>COMPUTER ENGINEERS</h2>
+          <p></p>
+       </div>
+       <!---ilisi na nlng dayun og picture og text-->
+
+     </div>
+    </div>
+  </div>
+  
+  <script>
+
+     
+    
+     showMenu = document.querySelector('#button1');
+     hideMenu = document.querySelector('#button2');
+     menuitems = document.querySelector('.links ul');
+
+     showMenu.onclick =()=>{
+       menuitems.classList.add('active');
+       showMenu.classList.add('hide');
+       hideMenu.classList.add('active');
+
+     }
+    hideMenu.onclick =()=>{
+      menuitems.classList.remove('active');
+      showMenu.classList.remove('hide');
+      hideMenu.classList.remove('active');
+      
+    }
+
+
+     /*items = document.querySelector('.links ul');
+
+     var button = document.getElementById('button');
+     button.addEventListener('click', () => {
+  // Do something when the button is clicked
+     items.classList.add('active');
+     });*/
+
+  </script>
+
+</body>
+</html>
